@@ -5,9 +5,9 @@ import Temperature from "./components/Temperature";
 import TemperatureRange from "components/TemperatureRange"
 import WeatherIcon from "components/WeatherIcon";
 
-const CurrentCity = () => {
+const CurrentCity = ({className}) => {
   return (
-    <div>
+    <div className={className}>
       <Date />
       <Name />
       <Temperature />

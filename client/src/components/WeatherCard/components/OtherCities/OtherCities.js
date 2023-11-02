@@ -1,7 +1,7 @@
 import City from './components/City/City';
-const OtherCities = () => {
+const OtherCities = ({className}) => {
   return (
-    <div>
+    <div className={`flex ${className}`}>
       <City />
       <City />
       <City />

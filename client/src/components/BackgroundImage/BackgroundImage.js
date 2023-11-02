@@ -1,7 +1,7 @@
-const BackgroundImage = () => {
+const BackgroundImage = ({className, children, src}) => {
   return (
-    <div>
-      BackgroundImage
+    <div className={className} style={{ backgroundImage: `url(${src})` }}>
+      {children}
     </div>
   )
 }

@@ -1,6 +1,6 @@
-const SearchBar = () => {
+const SearchBar = ({className}) => {
   return (
-    <div>SearchBar</div>
+    <div className={className}>SearchBar</div>
   )
 }
 
