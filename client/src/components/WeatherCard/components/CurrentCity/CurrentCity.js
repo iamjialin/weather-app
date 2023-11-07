@@ -8,11 +8,15 @@ import BackgroundImage from "components/BackgroundImage";
 import backgroundImage from 'assets/backgrounds/Sunny_background.png'
 
 const DATA = {
-  day: "23",
-  month: "July",
+  date: "23 July",
   weekday: "Sunday",
   time: "12:00",
   weather: "sunny",
+  temperature: "25",
+  temperatureRange: {
+    high: "32",
+    low: "20"
+  }
 }
 
 const CurrentCity = ({className}) => {
@@ -21,10 +25,10 @@ const CurrentCity = ({className}) => {
 
   return (
     <BackgroundImage className={`bg-no-repeat bg-cover rounded-[30px] text-white p-5 m-2 ${className}`} src={backgroundImage} linearGradient={linearGradient} >
-      <Date day={DATA.day} month={DATA.month} weekday={DATA.weekday} time={DATA.time} />
+      <Date date={DATA.date} weekday={DATA.weekday} time={DATA.time} />
       <Name className="text-3xl py-8" />
-      <Temperature />
-      <TemperatureRange />
+      <Temperature temperature={DATA.temperature} />
+      <TemperatureRange high={DATA.temperatureRange.high} low={DATA.temperatureRange.low} />
       <WeatherIcon className="mb-6" weather={DATA.weather} />
       <Meta />
     </BackgroundImage>

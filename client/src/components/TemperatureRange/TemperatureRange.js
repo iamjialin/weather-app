@@ -1,6 +1,6 @@
-const TemperatureRange = () => {
+const TemperatureRange = ({high, low}) => {
   return (
-    <p className="text-center">28&deg;~32&deg;</p>
+    <p className="text-center">{low}&deg;~{high}&deg;</p>
   )
 }
 

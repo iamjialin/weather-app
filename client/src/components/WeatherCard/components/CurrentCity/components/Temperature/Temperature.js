@@ -1,6 +1,6 @@
-const Temperature = ()=>{
+const Temperature = ({temperature})=>{
     return(
-        <p className="font-extrabold text-8xl text-center">32&deg;</p>
+        <p className="font-extrabold text-8xl text-center">{temperature}&deg;</p>
     );
 }
 

@@ -1,17 +1,17 @@
-const Date = ({day, month, weekday, time=""}) => {
+const Date = ({date, weekday, time=""}) => {
 
   if (time) {
     return (
       <p>
-        {day} {month}, {weekday} {time}
+        {date}, {weekday} {time}
       </p>
     )
   }
 
   return (
     <div className="text-center">
-      <p className="text-2xl font-semibold">{weekday}</p>
-      <p>{day} {month}</p>
+      <p className="text-2xl font-bold">{weekday}</p>
+      <p>{date}</p>
     </div>
   )
 }
