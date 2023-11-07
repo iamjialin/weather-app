@@ -5,11 +5,11 @@ import Wind from './components/Wind';
 
 const Meta = () =>{
     return (
-    <div>
-        <AirQuality />
+    <div className="flex gap-8 justify-center bg-white text-black rounded-2xl p-5">
         <Humidity />
-        <Somatosensory />
         <Wind />
+        <AirQuality />
+        <Somatosensory />
     </div>
     
     );

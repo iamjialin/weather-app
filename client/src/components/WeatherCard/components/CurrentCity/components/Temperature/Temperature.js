@@ -1,6 +1,6 @@
 const Temperature = ()=>{
     return(
-        <div>Temperature</div>
+        <p className="font-extrabold text-8xl text-center">32&deg;</p>
     );
 }
 

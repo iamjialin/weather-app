@@ -5,11 +5,11 @@ import OtherCities from "./components/OtherCities/OtherCities";
 
 const WeatherCard = () =>{
     return(
-    <div className="w-4/5 h-4/5 bg-white rounded-3xl shadow-blue-800 grid grid-cols-6 grid-rows-3">
-        <CurrentCity className="border-4 border-red-600 row-span-6 col-span-2" />
-        <Forecast className="border-4 border-cyan-600 col-span-4" />
-        <SearchBar className="border-4 border-orange-600 col-span-4" />
-        <OtherCities className="border-4 border-green-600 col-span-4" />
+    <div className="p-6 bg-white rounded-[48px] shadow-blue-800 grid grid-cols-[auto_auto_repeat(4,_minmax(0,_1fr))] grid-rows-[repeat(3, auto)] gap-8">
+        <CurrentCity className="row-span-3 col-span-2" />
+        <Forecast className="col-span-4" />
+        <SearchBar className="col-span-4" />
+        <OtherCities className="col-span-4" />
     </div>
     )
 }

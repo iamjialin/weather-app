@@ -7,7 +7,7 @@ import backgroundImage from './assets/backgrounds/background.png'
 function App() {
   return(
 
-    <BackgroundImage className={"bg-no-repeat bg-cover bg-center flex items-center justify-center h-screen"} src={backgroundImage}>
+    <BackgroundImage className={"bg-no-repeat bg-right-bottom w-[1440px] mx-auto h-[900px] p-28"} src={backgroundImage} linearGradient={"linear-gradient(to bottom right, #89A2F0, #6558DF)"} >
       <WeatherCard />
     </BackgroundImage>
 

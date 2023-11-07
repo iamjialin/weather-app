@@ -47,3 +47,5 @@
 - font
 - background image
 - weather icons
+
+主页面背景图给的是错的啊啊啊啊啊

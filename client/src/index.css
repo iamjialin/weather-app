@@ -7,3 +7,7 @@
     src: url(./assets/fonts/AlimamaFangYuanTiVF-Thin.woff) format('woff'),
         url(./assets/fonts/AlimamaFangYuanTiVF-Thin.woff2) format('woff2');
 }
+
+body{
+    font-family: 'AlimamaFangYuanTiVF-Square', sans-serif;
+}
