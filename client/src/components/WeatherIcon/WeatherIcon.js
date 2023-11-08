@@ -16,9 +16,7 @@ const ICON = {
 
 const WeatherIcon = ({className, weather}) => {
   return (
-    <div>
-      <img src={ICON[weather]} alt="sunny weather icon" className={`mx-auto ${className}`}/>
-    </div>
+    <img src={ICON[weather]} alt="weather icon" className={`mx-auto ${className}`} />
   )
 }
 

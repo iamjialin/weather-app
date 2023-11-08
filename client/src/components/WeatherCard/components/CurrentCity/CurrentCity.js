@@ -24,9 +24,9 @@ const CurrentCity = ({className}) => {
 
 
   return (
-    <BackgroundImage className={`bg-no-repeat bg-cover rounded-[30px] text-white p-5 m-2 ${className}`} src={backgroundImage} linearGradient={linearGradient} >
+    <BackgroundImage className={`bg-no-repeat bg-cover rounded-[30px] text-white p-5 ${className}`} src={backgroundImage} linearGradient={linearGradient} >
       <Date date={DATA.date} weekday={DATA.weekday} time={DATA.time} />
-      <Name className="text-3xl py-8" />
+      <Name name="Sydney" className="text-3xl py-8" />
       <Temperature temperature={DATA.temperature} />
       <TemperatureRange high={DATA.temperatureRange.high} low={DATA.temperatureRange.low} />
       <WeatherIcon className="mb-6" weather={DATA.weather} />

@@ -1,6 +1,6 @@
-const Name = ({className}) => {
+const Name = ({className, name}) => {
   return (
-    <p className={`font-bold text-center ${className}`}>Sydney</p>
+    <p className={`font-bold text-center ${className}`}>{name}</p>
   )
 }
 

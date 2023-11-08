@@ -1,14 +1,10 @@
 import DayOfWeek from './components/DayOfWeek';
-import sunny from 'assets/weather-icons/Sunny.png';
-import cloudy from 'assets/weather-icons/Cloudy.png';
-import rainy from 'assets/weather-icons/Rain.png';
-import snowy from 'assets/weather-icons/Snow.png';
 
 const DATA = [
   {
     "dayOfWeek": "Monday",
     "date":"24 July",
-    "weather": sunny,
+    "weather": "sunny",
     "temperatureRange": {
       "high": "25",
       "low": "20"
@@ -17,7 +13,7 @@ const DATA = [
   {
     "dayOfWeek": "Tuesday",
     "date":"25 July",
-    "weather": cloudy,
+    "weather": "cloudy",
     "temperatureRange": {
       "high": "20",
       "low": "18"
@@ -26,7 +22,7 @@ const DATA = [
   {
     "dayOfWeek": "Wednesday",
     "date":"26 July",
-    "weather": rainy,
+    "weather": "rainy",
     "temperatureRange": {
       "high": "23",
       "low": "20"
@@ -35,7 +31,7 @@ const DATA = [
   {
     "dayOfWeek": "Thursday",
     "date":"27 July",
-    "weather": snowy,
+    "weather": "snowy",
     "temperatureRange": {
       "high": "32",
       "low": "20"
