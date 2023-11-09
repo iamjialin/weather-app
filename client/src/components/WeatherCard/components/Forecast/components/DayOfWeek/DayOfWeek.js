@@ -6,7 +6,7 @@ const DayOfWeek = ({dayOfWeek, date, temperatureRange:{high, low}, weather}) => 
   return (
     <div className="mt-8 text-indigo-950">
       <Date weekday={dayOfWeek} date={date} />
-      <WeatherIcon className="p-4" weather={weather} />
+      <WeatherIcon className="px-4 py-2" weather={weather} />
       <TemperatureRange high={high} low={low} />
     </div>
   )
