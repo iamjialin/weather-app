@@ -2,7 +2,7 @@
 
 ## Step 1:
 
-### Responsibility-Based Componentization
+### Break the UI into a component hierarchy: Responsibility-Based Componentization
 
 - App
     - WeatherCard
@@ -48,4 +48,16 @@
 - background image
 - weather icons
 
-主页面背景图给的是错的啊啊啊啊啊
+## Step 2: Build a static version in React
+
+### Reusable components
+### Current City
+### Forecast
+### Search Bar
+### Other Cities
+
+## Step 3 & 4: Identify the minimal (but complete) representation of UI state and where it should live
+
+### Every UI change should trigger a state change
+### Identify where each piece of state lives and lift it up to the closest common ancestor
+### Use debug button to check UI changes when needed

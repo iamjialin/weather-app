@@ -1,5 +1,7 @@
 const Date = ({date, weekday, time=""}) => {
 
+  // const [date, setDate] = useState("23 July")
+
   if (time) {
     return (
       <p>

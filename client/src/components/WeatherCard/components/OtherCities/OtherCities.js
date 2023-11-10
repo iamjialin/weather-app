@@ -35,10 +35,17 @@ const DATA = [
   }
 ]
 
+const COLORS = [
+  "rgba(104, 152, 243, 0.8)",
+  "rgba(104, 152, 243, 0.8)",
+  "rgba(98, 118, 232, 0.8)",
+  "rgba(118, 111, 223, 0.8)",
+]
+
 const OtherCities = ({className}) => {
   return (
     <div className={`flex gap-6 px-2 ${className}`}>
-      {DATA.map((city)=>{return <City key={city.city} city={city.city} weather={city.weather} temperatureRange={city.temperatureRange} />})}
+      {DATA.map((city, index)=>{return <City key={city.city} city={city.city} weather={city.weather} color={COLORS[index]} temperatureRange={city.temperatureRange} />})}
     </div>
   )
 }
