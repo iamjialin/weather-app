@@ -15,8 +15,8 @@ const CITY = {
 
 const City = ({city, weather, color, temperatureRange:{high, low}}) => {
   return (
-    <div className="px-8 grow basis-0 bg-no-repeat bg-cover bg-center text-white rounded-3xl shadow-2xl shadow-indigo-200" style={{backgroundImage: `linear-gradient(to bottom, ${color}, ${color}), url(${CITY[city]})`}}>
-      <WeatherIcon className="w-16" weather={weather} />
+    <div className="w-44 py-4 bg-no-repeat bg-cover bg-center text-white rounded-3xl shadow-2xl shadow-indigo-200" style={{backgroundImage: `linear-gradient(to bottom, ${color}, ${color}), url(${CITY[city]})`}}>
+      <WeatherIcon className="w-12" weather={weather} />
       <Name className="text-2xl py-2" name={city} />
       <TemperatureRange high={high} low={low} />
     </div>

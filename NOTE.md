@@ -59,5 +59,6 @@
 ## Step 3 & 4: Identify the minimal (but complete) representation of UI state and where it should live
 
 ### Every UI change should trigger a state change
+### Every API call should have its useEffect function
 ### Identify where each piece of state lives and lift it up to the closest common ancestor
 ### Use debug button to check UI changes when needed

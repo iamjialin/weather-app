@@ -1,10 +1,10 @@
 import icon from 'assets/meta-icons/wind_speed.svg'
 
-const Wind = ()=>{
+const Wind = ({windSpeed})=>{
     return (
         <div>
             <img className="mx-auto" src={icon} alt="wind icon" />
-            <p>9km/h</p>
+            <p>{windSpeed}km/h</p>
         </div>
     )
 }

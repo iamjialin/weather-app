@@ -5,36 +5,41 @@ import Temperature from "./components/Temperature";
 import TemperatureRange from "components/TemperatureRange"
 import WeatherIcon from "components/WeatherIcon";
 import BackgroundImage from "components/BackgroundImage";
-import backgroundImage from 'assets/backgrounds/Sunny_background.png'
-import { useState } from "react";
+import backgroundImage from 'assets/backgrounds/Sunny_background.png';
+import getGeo from "apis/getGeo";
+import getCurrentWeather from "apis/getCurrentWeather";
+import { useState, useEffect } from "react";
 
-const DATA = {
-  date: "23 July",
-  weekday: "Sunday",
-  time: "12:00",
-  weather: "sunny",
-  temperature: "25",
-  temperatureRange: {
-    high: "32",
-    low: "20"
-  }
-}
+const CurrentCity = ({currentCity, className}) => {
+  const linearGradient = "linear-gradient(to bottom, #82ACFD, #3D7FF9)";
+  const [data, setData] = useState({
+                                    date:null, 
+                                    temperatureRange: { high: null, low: null },
+                                    temperature: null,
+                                    dayOfWeek: null,
+                                    weather: null,
+                                    humidity: null,
+                                    windSpeed: null,
+                                    somatosensory: null,
+                                    time: null,
+                                  });
+  const [geo, setGeo] = useState({lat: null, lon: null});
 
-const CurrentCity = ({className}) => {
-  const linearGradient = "linear-gradient(to bottom, #82ACFD, #3D7FF9)"
-
-  const [date, setDate] = useState("23 July")
-
+  useEffect(()=>{
+    getGeo(currentCity)
+    .then(({lat, lon}) => { setGeo({lat, lon}); return getCurrentWeather(lat, lon)})
+    .then((response)=> setData(response))
+    .catch((error)=> console.log(error))
+  }, [currentCity])
 
   return (
     <BackgroundImage className={`bg-no-repeat bg-cover rounded-[30px] text-white p-5 ${className}`} src={backgroundImage} linearGradient={linearGradient} >
-      <Date date={date} weekday={DATA.weekday} time={DATA.time} />
-      <button onClick={() => setDate("24 July")}>Change Date</button>
-      <Name name="Sydney" className="text-3xl pt-6 pb-8" />
-      <Temperature temperature={DATA.temperature} />
-      <TemperatureRange high={DATA.temperatureRange.high} low={DATA.temperatureRange.low} />
-      <WeatherIcon className="mb-6" weather={DATA.weather} />
-      <Meta />
+      <Date date={data.date} dayOfWeek={data.dayOfWeek} time={data.time} />
+      <Name name={currentCity} className="text-3xl pt-6 pb-8" />
+      <Temperature temperature={data.temperature} />
+      <TemperatureRange high={data.temperatureRange.high} low={data.temperatureRange.low} />
+      <WeatherIcon className="mb-6" weather={data.weather} />
+      <Meta geo={geo} humidity={data.humidity} windSpeed={data.windSpeed} somatosensory={data.somatosensory} />
     </BackgroundImage>
   )
 }

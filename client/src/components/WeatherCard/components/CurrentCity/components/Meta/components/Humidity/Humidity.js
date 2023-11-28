@@ -1,10 +1,10 @@
 import icon from 'assets/meta-icons/humidity.svg'
 
-const Humidity =()=>{
+const Humidity =({humidity})=>{
     return(
         <div>
             <img className="mx-auto" src={icon} alt="humidity icon" />
-            <p>75%</p>
+            <p>{humidity}%</p>
         </div>
     )
 }
